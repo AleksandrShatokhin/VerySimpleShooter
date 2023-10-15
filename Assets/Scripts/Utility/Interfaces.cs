@@ -22,6 +22,7 @@ public interface IEnemy
 {
     void Initialize(IPoolable poolBullet, Transform target);
     void AttachWeapon(GameObject weapon);
+    void Rotation();
 }
 
 public interface IPoolable

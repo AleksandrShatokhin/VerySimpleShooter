@@ -502,4 +502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554e4edf24ffdfa40bceab7f2e08dfd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentWeapon: {fileID: 0}
   _handPosition: {fileID: 6455886178791398781}
+  _currentPoolStruct:
+    Prefab: {fileID: 0}
+    Container: {fileID: 0}
+  _delayBetweenShot: 1
+  _distanceForShot: 70

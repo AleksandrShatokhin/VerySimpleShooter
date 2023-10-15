@@ -1,18 +1,5 @@
-public enum PoolType
+public enum AttackType
 {
-    Enemy,
-    Weapon,
-    Bullet
-}
-
-public enum EnemyType
-{
-    Blue,
-    Red
-}
-
-public enum WeaponType
-{
-    Pistol,
-    MachineGun
+    Player,
+    Enemy
 }

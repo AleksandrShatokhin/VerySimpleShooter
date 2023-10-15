@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Pistol : WeaponBase
+public class MachineGun : WeaponBase
 {
     public override void Initialize(IPoolable poolBullet, Transform target)
     {

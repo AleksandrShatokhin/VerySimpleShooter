@@ -13,4 +13,9 @@ public class EnemyBlue : EnemyBase
         _currentWeapon.GetComponent<IWeapon>().Initialize(_poolBullet, _target);
         _currentWeapon.SetActive(true);
     }
+
+    public override void Rotation()
+    {
+        RotationEnemy();
+    }
 }

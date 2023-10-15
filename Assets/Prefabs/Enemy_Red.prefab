@@ -314,7 +314,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e495d003cc008e44b0316f7be81698d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentWeapon: {fileID: 0}
   _handPosition: {fileID: 1647599825608707222}
+  _currentPoolStruct:
+    Prefab: {fileID: 0}
+    Container: {fileID: 0}
+  _delayBetweenShot: 2
+  _distanceForShot: 50
 --- !u!1 &8608939514257510746
 GameObject:
   m_ObjectHideFlags: 0
