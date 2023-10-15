@@ -290,6 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnBulletPosition: {fileID: 3319347531803938256}
+  _damage: 30
 --- !u!1 &4896719842986971096
 GameObject:
   m_ObjectHideFlags: 0

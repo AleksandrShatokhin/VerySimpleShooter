@@ -27,7 +27,6 @@ public class Bullet : MonoBehaviour, IInitialize<int>
         RaycastHit hit;
         if (Physics.Linecast(_previewPosition, transform.position, out hit))
         {
-            Debug.Log(hit.transform.gameObject.name);
             hit.transform.GetComponent<IDamagable>()?.TakeDamage(_damage);
             ReturnBullet();
         }

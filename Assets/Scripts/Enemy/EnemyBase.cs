@@ -10,6 +10,8 @@ public abstract class EnemyBase : MonoBehaviour, IEnemy, IDeatable
     [SerializeField] protected float _delayBetweenShot;
     [SerializeField] protected float _distanceForShot;
 
+    private int _speedRotation = 5;
+
     protected IPoolable _poolBullet;
     protected Transform _target;
 
@@ -27,7 +29,7 @@ public abstract class EnemyBase : MonoBehaviour, IEnemy, IDeatable
     {
         Vector3 direction = _target.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 5 * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, _speedRotation * Time.deltaTime);
     }
 
     protected float DistanseToTarget => Vector3.Distance(_target.position, transform.position);

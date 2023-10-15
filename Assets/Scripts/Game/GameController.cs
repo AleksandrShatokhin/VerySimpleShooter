@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private PoolWeapon _poolWeapon;
 
     [SerializeField] private EnemySpawn _enemySpawner;
+    [SerializeField] private int _countEnemy;
 
     [SerializeField] private IFactory _factory;
 
@@ -29,12 +30,15 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         _factory = GetComponent<IFactory>();
         _factory.Initialize(_poolEnemy, _poolWeapon);
 
         GeneratePlayer();
 
-        CreateEnemy(2);
+        Invoke("CreateEnemy", 1.0f);
     }
 
     private void GeneratePlayer()
@@ -44,9 +48,9 @@ public class GameController : MonoBehaviour
         _playerController.Initialize(_playerInput);
     }
 
-    private void CreateEnemy(int count)
+    private void CreateEnemy()
     {
-        for (int i = 0; i < count; i++)
+        for (int i = 0; i < _countEnemy; i++)
         {
             GameObject enemy = _factory.CreateEnemy();
             GameObject weapon = _factory.CreateWeapon();
