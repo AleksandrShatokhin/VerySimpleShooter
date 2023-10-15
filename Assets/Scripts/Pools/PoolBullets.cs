@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class PoolObject : MonoBehaviour
+public class PoolBullets : MonoBehaviour, IPoolable
 {
+    [SerializeField] private int _countElement;
     [SerializeField] private PoolStruct _bulletObject;
 
     private CustomStack<GameObject> _stackBullet;
@@ -10,7 +11,7 @@ public class PoolObject : MonoBehaviour
     {
         _stackBullet = new CustomStack<GameObject>();
 
-        AddObjectToPool(_bulletObject, 100);
+        AddObjectToPool(_bulletObject, _countElement);
     }
 
     private void AddObjectToPool(PoolStruct poolStruct, int count)
@@ -24,13 +25,13 @@ public class PoolObject : MonoBehaviour
         }
     }
 
-    public GameObject TakeFromPool()
+    public GameObject Take()
     {
         GameObject tempObject = _stackBullet.TakeElement();
         return tempObject;
     }
 
-    public void ReturnToPool(GameObject obj)
+    public void Return(GameObject obj)
     {
         obj.transform.localPosition = new Vector3(0, 0, 0);
         obj.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));

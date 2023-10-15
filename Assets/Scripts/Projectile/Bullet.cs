@@ -4,13 +4,13 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _timeToReturn;
-    private PoolObject _poolObject;
+    private IPoolable _poolObject;
     private Vector3 _previewPosition;
 
     private void Start()
     {
         Invoke("ReturnBullet", _timeToReturn);
-        _poolObject = GetComponentInParent<PoolObject>();
+        _poolObject = GetComponentInParent<IPoolable>();
         _previewPosition = transform.position;
     }
 
@@ -29,6 +29,6 @@ public class Bullet : MonoBehaviour
 
     private void ReturnBullet()
     {
-        _poolObject.ReturnToPool(gameObject);
+        _poolObject.Return(gameObject);
     }
 }

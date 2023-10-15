@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class WeaponBase : MonoBehaviour, IInitialize<PoolObject>, IAttackable
+public abstract class WeaponBase : MonoBehaviour, IWeapon
 {
-    [SerializeField] protected Camera _playerCamera;
     [SerializeField] protected Transform _spawnBulletPosition;
-    [SerializeField] protected PoolObject _poolObject;
+    protected Transform _targetPosition;
+    protected IPoolable _poolBullet;
 
-    public abstract void Initialize(PoolObject poolObject);
+    public abstract void Initialize(IPoolable poolBullet, Transform target);
     public abstract void Attack();
+
 }

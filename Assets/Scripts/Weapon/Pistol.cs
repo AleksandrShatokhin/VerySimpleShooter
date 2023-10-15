@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class Pistol : WeaponBase
 {
-    [SerializeField] private Transform _targetPosition;
 
-    public override void Initialize(PoolObject poolObject)
+    public override void Initialize(IPoolable poolBullet, Transform target)
     {
-        _poolObject = poolObject;
+        _poolBullet = poolBullet;
+        _targetPosition = target;
     }
 
     public override void Attack()
     {
         _spawnBulletPosition.LookAt(_targetPosition);
 
-        GameObject tempBullet = _poolObject.TakeFromPool();
+        GameObject tempBullet = _poolBullet.Take();
         tempBullet.transform.position = _spawnBulletPosition.position;
         tempBullet.transform.rotation = _spawnBulletPosition.rotation;
         tempBullet.SetActive(true);
