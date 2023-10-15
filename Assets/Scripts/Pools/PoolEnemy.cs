@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class PoolEnemy : MonoBehaviour, IPoolable
 {
-    [SerializeField] private int _countOfEachElement;
-
     [SerializeField] private PoolStruct _enemyRed;
     [SerializeField] private PoolStruct _enemyBlue;
 
     private CustomQueue<GameObject> _queueEnemy;
 
-    private void Start()
+    public void Initialize(int count)
     {
         _queueEnemy = new CustomQueue<GameObject>();
 
-        AddObjectToPool(_enemyRed, _countOfEachElement);
-        AddObjectToPool(_enemyBlue, _countOfEachElement);
+        AddObjectToPool(_enemyRed, count);
+        AddObjectToPool(_enemyBlue, count);
     }
 
     private void AddObjectToPool(PoolStruct poolStruct, int count)

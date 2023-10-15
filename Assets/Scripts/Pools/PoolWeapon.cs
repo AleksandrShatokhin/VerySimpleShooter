@@ -2,18 +2,16 @@ using UnityEngine;
 
 public class PoolWeapon : MonoBehaviour, IPoolable
 {
-    [SerializeField] private int _countOfEachEnemy;
-
     [SerializeField] private PoolStruct _pistol;
     [SerializeField] private PoolStruct _machineGun;
 
     private CustomQueue<GameObject> _queueWeapon;
 
-    private void Start()
+    public void Initialize(int count)
     {
         _queueWeapon = new CustomQueue<GameObject>();
 
-        for (int i = 0; i < _countOfEachEnemy; i++)
+        for (int i = 0; i < count; i++)
         {
             AddObjectToPool(_pistol);
             AddObjectToPool(_machineGun);

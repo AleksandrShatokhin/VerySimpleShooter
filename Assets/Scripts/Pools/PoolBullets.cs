@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class PoolBullets : MonoBehaviour, IPoolable
 {
-    [SerializeField] private int _countElement;
     [SerializeField] private PoolStruct _bulletObject;
-
     private CustomStack<GameObject> _stackBullet;
 
-    private void Start()
+    public void Initialize(int count)
     {
         _stackBullet = new CustomStack<GameObject>();
 
-        AddObjectToPool(_bulletObject, _countElement);
+        AddObjectToPool(_bulletObject, count);
     }
 
     private void AddObjectToPool(PoolStruct poolStruct, int count)

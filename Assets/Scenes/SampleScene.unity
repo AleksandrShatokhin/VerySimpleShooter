@@ -732,14 +732,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b7cd62869ee5d42bd90ab28bb5ce67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemySpawner: {fileID: 312048770}
+  _countEnemy: 6
   _playerInput: {fileID: 2032547822}
   _spawnPositionPlayer: {fileID: 2085966994}
   _playerPrefab: {fileID: 1734551648926026448, guid: c92192b43701bf94bb5bfbce9d3b3ac1, type: 3}
   _poolBullets: {fileID: 1781981047}
   _poolEnemy: {fileID: 1514293235}
   _poolWeapon: {fileID: 1718278805}
-  _enemySpawner: {fileID: 312048770}
-  _countEnemy: 6
+  _countBulletsToPool: 100
+  _countEnemyToPool: 5
+  _countWeaponToPool: 5
 --- !u!114 &312048769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,7 +2068,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da27baacacb2e5479e9816a693e42ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _countOfEachElement: 5
   _enemyRed:
     Prefab: {fileID: 7971131150078249858, guid: 5a03e54a7b39a61438f8d47b7c46a058, type: 3}
     Container: {fileID: 1514293234}
@@ -2283,7 +2285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d367e3182da1e4c8f02903d96e7513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _countOfEachEnemy: 5
   _pistol:
     Prefab: {fileID: 6344053929587363556, guid: c3b37cb37a00075449737e1d58eed862, type: 3}
     Container: {fileID: 1718278804}
@@ -2334,7 +2335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dfd65f23e627bd45aadda769a168bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _countElement: 100
   _bulletObject:
     Prefab: {fileID: 2314303612785712265, guid: 7ca28dcedd5fb82429dce77fb9132713, type: 3}
     Container: {fileID: 1781981046}
