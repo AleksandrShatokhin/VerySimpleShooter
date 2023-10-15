@@ -1,11 +1,17 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : MonoBehaviour, IInitialize<int>
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _timeToReturn;
+    private int _damage;
     private IPoolable _poolObject;
     private Vector3 _previewPosition;
+
+    public void Initialize(int damage)
+    {
+        _damage = damage;
+    }
 
     private void Start()
     {
@@ -21,6 +27,8 @@ public class Bullet : MonoBehaviour
         RaycastHit hit;
         if (Physics.Linecast(_previewPosition, transform.position, out hit))
         {
+            Debug.Log(hit.transform.gameObject.name);
+            hit.transform.GetComponent<IDamagable>()?.TakeDamage(_damage);
             ReturnBullet();
         }
 

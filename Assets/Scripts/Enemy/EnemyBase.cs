@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public abstract class EnemyBase : MonoBehaviour, IEnemy
+public abstract class EnemyBase : MonoBehaviour, IEnemy, IDeatable
 {
     [SerializeField] protected GameObject _currentWeapon;
     [SerializeField] protected Transform _handPosition;
@@ -20,8 +20,8 @@ public abstract class EnemyBase : MonoBehaviour, IEnemy
     }
 
     public abstract void AttachWeapon(GameObject weapon);
-
     public abstract void Rotation();
+    public abstract void Death();
 
     protected void RotationEnemy()
     {

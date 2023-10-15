@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1612581426496029971}
   - component: {fileID: 4559056178927323029}
   - component: {fileID: 4643484052029034618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,8 +94,7 @@ GameObject:
   - component: {fileID: 6699112085358360923}
   - component: {fileID: 5492259094913009844}
   - component: {fileID: 2703318961721960951}
-  - component: {fileID: 4588924177898437164}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,27 +168,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4588924177898437164
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2778563219561658558}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4985467544704893003
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6455886178791398781}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,8 +210,7 @@ GameObject:
   - component: {fileID: 2166007202490829401}
   - component: {fileID: 244479303572436211}
   - component: {fileID: 1735022231259125538}
-  - component: {fileID: 1525698443588450371}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: EyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,27 +282,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1525698443588450371
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6847976632423856914}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7085954014364018219
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,8 +293,7 @@ GameObject:
   - component: {fileID: 4346835582824067007}
   - component: {fileID: 529206595061170244}
   - component: {fileID: 2567576701869554745}
-  - component: {fileID: 5906691382761807405}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: EyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,27 +365,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5906691382761807405
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085954014364018219}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8860181770039264606
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +376,8 @@ GameObject:
   - component: {fileID: 5302660140635276926}
   - component: {fileID: 6187478833694667108}
   - component: {fileID: -1356899492863492030}
-  m_Layer: 0
+  - component: {fileID: -1538630808974093869}
+  m_Layer: 7
   m_Name: Enemy_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,3 +444,16 @@ MonoBehaviour:
     Container: {fileID: 0}
   _delayBetweenShot: 1
   _distanceForShot: 70
+--- !u!114 &-1538630808974093869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8860181770039264606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433a32994ee333a49aa4ba25f54b574b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100

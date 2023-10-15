@@ -18,4 +18,13 @@ public class EnemyRed : EnemyBase
     {
         RotationEnemy();
     }
+
+    public override void Death()
+    {
+        IPoolable poolWeapon = _currentPoolStruct.Container.GetComponent<IPoolable>();
+        _currentWeapon.transform.SetParent(_currentPoolStruct.Container);
+        poolWeapon.Return(_currentWeapon);
+
+        GetComponentInParent<IPoolable>().Return(gameObject);
+    }
 }

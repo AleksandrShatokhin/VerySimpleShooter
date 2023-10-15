@@ -315,7 +315,7 @@ Transform:
   - {fileID: 398067895379847399}
   - {fileID: 6222112925303961025}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4931084686013766879
 Rigidbody:
@@ -1328,6 +1328,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5182274935652621334}
     m_Modifications:
+    - target: {fileID: 6055282078929422856, guid: c3b37cb37a00075449737e1d58eed862, type: 3}
+      propertyPath: _damage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6055282078929422856, guid: c3b37cb37a00075449737e1d58eed862, type: 3}
       propertyPath: _playerCamera
       value: 

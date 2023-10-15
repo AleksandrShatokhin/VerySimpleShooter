@@ -13,6 +13,7 @@ public class MachineGun : WeaponBase
         _spawnBulletPosition.LookAt(_targetPosition);
 
         GameObject tempBullet = _poolBullet.Take();
+        tempBullet.GetComponent<IInitialize<int>>().Initialize(_damage);
         tempBullet.transform.position = _spawnBulletPosition.position;
         tempBullet.transform.rotation = _spawnBulletPosition.rotation;
         tempBullet.SetActive(true);

@@ -30,3 +30,13 @@ public interface IPoolable
     GameObject Take();
     void Return(GameObject obj);
 }
+
+public interface IDamagable
+{
+    void TakeDamage(int damage);
+}
+
+public interface IDeatable
+{
+    void Death();
+}

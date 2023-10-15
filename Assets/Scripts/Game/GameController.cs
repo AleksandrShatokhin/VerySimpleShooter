@@ -60,4 +60,6 @@ public class GameController : MonoBehaviour
     }
 
     public PoolBullets GetPoolBullets() => _poolBullets;
+    public PoolEnemy GetPoolEnemies() => _poolEnemy;
+    public PoolWeapon GetPoolWeapons() => _poolWeapon;
 }
